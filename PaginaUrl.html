@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detección de URLs Maliciosas: Una Guía Completa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🛡️ Detección de URLs Maliciosas 🛡️</h1>
+            <p>Protegiendo tu navegación en el mundo digital</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+             <p style="text-align:center; padding: 10px 0; font-style: italic;">Guía informativa sobre la detección de URLs peligrosas.</p>
+        </div>
+    </nav>
+
+    <main>
+        <section id="introduccion" class="hero-section">
+            <div class="container">
+                <h2>¿Qué son las URLs Maliciosas y Por Qué Deben Preocuparnos?</h2>
+                <p>
+                    Las URLs (Uniform Resource Locators), o direcciones web, son la forma en que accedemos a sitios y servicios en Internet. Sin embargo, no todas las URLs son seguras. Las URLs maliciosas son creadas por ciberdelincuentes con la intención de engañar a los usuarios para que visiten sitios peligrosos. Estos sitios pueden instalar software dañino (malware), robar información personal sensible como contraseñas o datos bancarios (phishing), o redirigir a otros contenidos peligrosos. Los ataques que utilizan URLs maliciosas pueden causar pérdidas económicas significativas y comprometer la privacidad y seguridad de las personas y organizaciones. Por esta razón, es crucial contar con métodos efectivos para detectar y bloquear estas URLs antes de que causen daño.
+                </p>
+                <p>
+                    Tradicionalmente, la detección se basaba en listas de URLs ya conocidas como maliciosas (listas negras). No obstante, este método es limitado porque los atacantes crean nuevas URLs constantemente, haciendo que las listas negras se queden obsoletas rápidamente. Para superar estas limitaciones, se están desarrollando técnicas más avanzadas, como el uso de Inteligencia Artificial (IA), específicamente el aprendizaje automático (Machine Learning), que pueden aprender a identificar patrones en las URLs y su comportamiento para predecir si son maliciosas o no.
+                </p>
+            </div>
+        </section>
+
+        <section id="tipos-ataques" class="content-section">
+            <div class="container">
+                <h2>Explorando los Ataques Detrás de las URLs</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Phishing</h3>
+                        <p>
+                            El phishing es una de las tácticas más comunes. Los atacantes crean sitios web que son copias casi idénticas de páginas legítimas, como bancos, redes sociales o servicios de correo. El objetivo es engañar al usuario para que ingrese sus credenciales (nombre de usuario y contraseña), números de tarjeta de crédito u otra información confidencial. Las URLs de phishing suelen ser muy parecidas a las originales, a veces con pequeños errores ortográficos o usando subdominios que parecen legítimos para confundir al usuario.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Malware</h3>
+                        <p>
+                            Las URLs maliciosas pueden ser un conducto para distribuir malware. Al hacer clic en una de estas URLs, el usuario puede ser llevado a una página que descarga e instala automáticamente software dañino en su dispositivo sin su consentimiento. Este malware puede ser de varios tipos: virus, troyanos (que parecen programas legítimos pero ocultan funciones maliciosas), ransomware (que secuestra los archivos del usuario y pide un rescate) o spyware (que espía la actividad del usuario). Incluso los códigos QR pueden contener enlaces que distribuyen malware.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Redirecciones Inesperadas</h3>
+                        <p>
+                            A veces, al hacer clic en un enlace que parece seguro, o incluso al visitar un sitio web que ha sido comprometido, el usuario puede ser redirigido automáticamente a uno o varios sitios web maliciosos. Estas redirecciones pueden ser muy rápidas y pasar por múltiples URLs intermediarias, haciendo difícil para el usuario darse cuenta de lo que está sucediendo hasta que es demasiado tarde. Este tipo de ataque es particularmente problemático en dispositivos móviles como los Android.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Otros Ataques (Spamming, Defacement)</h3>
+                        <p>
+                            El <strong>Spamming</strong> implica el envío masivo de correos electrónicos o mensajes con URLs que llevan a sitios de phishing o malware. Por otro lado, el <strong>Defacement</strong> (o desfiguración) ocurre cuando un atacante modifica la apariencia de un sitio web legítimo, reemplazando su contenido con mensajes propios, a menudo con fines ideológicos o para dañar la reputación del sitio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ia-deteccion" class="content-section grey-bg">
+            <div class="container">
+                <h2>La Inteligencia Artificial al Rescate: Detección Avanzada de URLs</h2>
+                <p>
+                    La Inteligencia Artificial (IA), y en particular el Machine Learning (ML) y el Deep Learning (DL), están transformando la forma en que detectamos URLs maliciosas. Estos sistemas pueden "aprender" de grandes cantidades de ejemplos de URLs benignas y maliciosas para identificar patrones sutiles que los humanos o los métodos tradicionales podrían pasar por alto.
+                </p>
+                <div class="two-column-layout">
+                    <div>
+                        <h3>Machine Learning (ML)</h3>
+                        <p>
+                            Los modelos de ML utilizan diversas características extraídas de las URLs para clasificarlas. Estas características pueden ser <strong>lexicales</strong> (analizando el texto de la URL, como su longitud, presencia de caracteres especiales o palabras clave sospechosas), <strong>basadas en el host</strong> (información sobre el servidor donde se aloja la URL, como la antigüedad del dominio o su dirección IP) o <strong>basadas en el contenido</strong> (analizando el contenido de la página web a la que lleva la URL, aunque esto puede ser más lento y riesgoso). Algoritmos comunes incluyen Support Vector Machines (SVM), Random Forest y Regresión Logística. Para que estos modelos sean efectivos, es crucial entrenarlos con conjuntos de datos (datasets) que sean representativos y estén actualizados.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Deep Learning (DL)</h3>
+                        <p>
+                            El Deep Learning, un subcampo del ML, utiliza redes neuronales con múltiples capas para aprender representaciones de datos de forma jerárquica. Para la detección de URLs, modelos como las Redes Neuronales Convolucionales (CNN) pueden analizar la URL como una secuencia de caracteres, mientras que las Redes Neuronales Recurrentes (RNN) y las LSTMs son buenas para capturar patrones secuenciales. Modelos más avanzados como los Transformers (ej. BERT, CharacterBERT) pueden entender el contexto y la semántica de las URLs, incluso a nivel de caracteres, lo que es útil para detectar ofuscaciones y URLs no estándar. Estos modelos tienen la ventaja de poder aprender características directamente de los datos, reduciendo la necesidad de ingeniería de características manual.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="casos-especificos" class="content-section">
+            <div class="container">
+                <h2>Aplicaciones en la Vida Real: Ejemplos de Detección</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Detección de Phishing en URLs de Inicio de Sesión 🔓</button>
+                        <div class="accordion-content">
+                            <p>
+                                Un desafío particular en la detección de phishing es que los atacantes a menudo clonan las páginas de inicio de sesión (login) de sitios populares. Por lo tanto, los modelos de detección deben ser entrenados con URLs de login legítimas como ejemplos de URLs benignas, en lugar de solo páginas de inicio generales. El estudio del dataset PILU-90K, por ejemplo, enfatiza esta necesidad al incluir específicamente URLs de inicio de sesión legítimas y de phishing para un entrenamiento más realista. Se analizan características lexicales de la URL, como la presencia de palabras como "login", "signin", o el uso de HTTPS, así como la estructura del dominio y la ruta. La longitud de la URL y sus diferentes partes también son indicadores importantes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Protegiendo Android de Redirecciones Maliciosas 📱</button>
+                        <div class="accordion-content">
+                            <p>
+                                En dispositivos Android, un método propuesto para detectar redirecciones maliciosas se basa en monitorear la frecuencia con la que cambia la URL en la barra de direcciones del navegador. Las redirecciones a sitios maliciosos suelen implicar varios saltos de URL en un corto período. Utilizando el servicio de accesibilidad de Android, una aplicación puede registrar estos cambios y el tiempo transcurrido entre ellos. Si se detectan, por ejemplo, 3 o más cambios de URL en menos de 6 segundos (valores de umbral que se pueden ajustar), se puede alertar al usuario sobre una posible redirección maliciosa. Para reducir falsas alarmas, el sistema también intenta identificar si los cambios de URL fueron iniciados por acciones del usuario, como hacer clic en un enlace.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">QsecR: Escaneo Seguro de Códigos QR 📸</button>
+                        <div class="accordion-content">
+                            <p>
+                                Los códigos QR pueden ocultar URLs maliciosas. QsecR es un escáner de QR para Android diseñado para abordar este riesgo. En lugar de depender solo de listas negras o modelos de ML complejos, QsecR utiliza un marco de detección basado en características estáticas predefinidas. Cuando se escanea un QR, primero resuelve cualquier redirección para obtener la URL final. Luego, extrae 39 tipos de características, incluyendo consultas a listas negras (como VirusTotal), análisis lexical (estructura de la URL), información del host (datos del servidor, ranking) y del contenido (HTML, JavaScript). Cada característica contribuye a una puntuación, y si la puntuación total supera un umbral, la URL se marca como maliciosa. Un aspecto interesante es que si una característica no puede ser evaluada (por ejemplo, por un fallo de API), QsecR puede usar la información de otras características para tomar una decisión.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="consejos-seguridad" class="content-section grey-bg">
+            <div class="container">
+                <h2>Mantente Seguro: Consejos Prácticos</h2>
+                <ul>
+                    <li>
+                        <strong>Verifica Siempre la URL:</strong> Antes de hacer clic, especialmente en correos o mensajes, revisa cuidadosamente la dirección web. Busca errores ortográficos, dominios que no coinciden con la entidad que supuestamente envía el mensaje, o un exceso de subdominios.
+                    </li>
+                    <li>
+                        <strong>No Hagas Clic en Enlaces Sospechosos:</strong> Si un correo electrónico, mensaje de texto o publicación en redes sociales te parece sospechoso, te presiona para actuar con urgencia, o proviene de un remitente desconocido, evita hacer clic en los enlaces. Es mucho más seguro escribir directamente la dirección del sitio web oficial en tu navegador.
+                    </li>
+                    <li>
+                        <strong>Utiliza Soluciones de Seguridad:</strong> Asegúrate de que tu sistema operativo, navegador web y software antivirus estén siempre actualizados. Muchos navegadores modernos y programas de seguridad incluyen protección contra sitios web maliciosos y de phishing conocidos.
+                    </li>
+                    <li>
+                        <strong>Cuidado con los Códigos QR:</strong> Escanea códigos QR solo de fuentes en las que confíes. Desconfía de códigos QR pegados en lugares públicos sin contexto claro. Si es posible, utiliza una aplicación de escaneo de QR que te muestre la URL completa antes de abrirla en el navegador, permitiéndote revisarla.
+                    </li>
+                     <li>
+                        <strong>Desconfía de las Redirecciones Múltiples:</strong> Si al intentar acceder a un sitio web notas que la barra de direcciones cambia varias veces muy rápidamente, podría ser una señal de alerta. Algunos sistemas de detección en Android se basan precisamente en este comportamiento.
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Guía de Detección de URLs Maliciosas. Contenido basado en investigación científica.</p>
+            <p>Fuentes Principales: Los cinco artículos PDF proporcionados (nombres omitidos para brevedad en esta versión).</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const accordionItem = header.parentElement;
+                    const currentAccordion = accordionItem.closest('.accordion');
+                    if (currentAccordion) {
+                        currentAccordion.querySelectorAll('.accordion-item.active').forEach(openItem => {
+                            if (openItem !== accordionItem) {
+                                openItem.classList.remove('active');
+                            }
+                        });
+                    }
+                    accordionItem.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
